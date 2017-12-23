@@ -1,0 +1,21 @@
+package Prog2;
+
+public class ProjectMain {
+
+	public static void main(String[] args) {
+
+		Project project = new Project();
+
+		project.setProjectId("1234np");
+		project.setProjectName("Java");
+		project.setProjectHead("Meena");
+		project.setNoOfResources(15);
+
+		System.out.println("Project ID: " + project.getProjectId());
+		System.out.println("Project Name: " + project.getProjectName());
+		System.out.println("Project Head: " + project.getProjectHead());
+		System.out.println("Number of Resources: " + project.getNoOfResources());
+
+	}
+
+}
