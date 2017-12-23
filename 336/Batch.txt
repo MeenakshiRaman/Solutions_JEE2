@@ -1,0 +1,98 @@
+Batch/**
+ * 
+ */
+package Prog1;
+
+/**
+ * @author Meena
+ *
+ */
+public class Batch {
+
+	private String batchCode;
+	private String startDate;
+	private String endDate;
+	private Trainee Trainee[];
+
+	public Batch() {
+		super();
+		this.batchCode = "";
+		this.startDate = "";
+		this.endDate = "";
+		Trainee = null;
+	}
+
+	public Batch(String batchCode, String startDate, String endDate, Trainee[] trainee) {
+		this.batchCode = batchCode;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		Trainee = trainee;
+	}
+
+	public String getBatchCode() {
+		return batchCode;
+	}
+
+	public void setBatchCode(String batchCode) {
+		this.batchCode = batchCode;
+	}
+
+	public String getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
+	}
+
+	public String getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(String endDate) {
+		this.endDate = endDate;
+	}
+
+	public Trainee[] getTrainee() {
+		return Trainee;
+	}
+
+	public void setTrainee(Trainee[] trainee) {
+		Trainee = trainee;
+	}
+
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (obj instanceof Batch) {
+			Batch b = (Batch) obj;
+			if (b.batchCode == this.batchCode) {
+				return true;
+			}
+			if (b.startDate == this.startDate) {
+				return true;
+			}
+			if (b.endDate == this.endDate) {
+				return true;
+			}
+			if (b.Trainee == this.Trainee) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public int hashcode() {
+		return 0;
+	}
+
+	@Override
+	public String toString() {
+		return "Batch code: " + batchCode + "\nStartdate: " + startDate + "\nEnddate: " + endDate + "\nTrainee: "
+				+ Trainee;
+	}
+}

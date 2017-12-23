@@ -1,0 +1,121 @@
+/**
+ * 
+ */
+package Prog1;
+
+import java.io.Serializable;
+
+/**
+ * @author Meena
+ *
+ */
+public class Trainee implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String traineeId;
+	private String traineeName;
+	private String contactNo;
+	private String email;
+	private String gender;
+	private int age;
+
+	public Trainee() {
+		super();
+		this.traineeId = "";
+		this.traineeName = "";
+		this.contactNo = "";
+		this.email = "";
+		this.gender = "";
+		this.age = 0;
+	}
+
+	public Trainee(String traineeId, String traineeName, String contactNo, String email, String gender, int age) {
+		super();
+		this.traineeId = traineeId;
+		this.traineeName = traineeName;
+		this.contactNo = contactNo;
+		this.email = email;
+		this.gender = gender;
+		this.age = age;
+
+	}
+
+	public String getTraineeId() {
+		return traineeId;
+	}
+
+	public void setTraineeId(String traineeId) {
+		this.traineeId = traineeId;
+	}
+
+	public String getTraineeName() {
+		return traineeName;
+	}
+
+	public void setTraineeName(String traineeName) {
+		this.traineeName = traineeName;
+	}
+
+	public String getContactNo() {
+		return contactNo;
+	}
+
+	public void setContactNo(String contactNo) {
+		this.contactNo = contactNo;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		return true;
+	}
+	
+	@Override
+	public int hashCode() {
+		int result = 17;
+		result = 37 * result + traineeId.hashCode();
+		result = 37 * result + (int) age;
+		return result;
+	}
+	@Override
+	public String toString() {
+		return "Trainee ID = " + traineeId + " \nTrainee Name = " + traineeName + " \nContact number = " + contactNo
+				+ " \nEmail = " + email + " \nGender = " + gender + " \nAge = " + age;
+
+	}
+}
